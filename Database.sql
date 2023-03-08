@@ -10,6 +10,13 @@ CREATE TABLE meber_info/*创建人员信息表*/
     birthdate VARCHAR(20) NOT NULL COMMENT '出生日期',
     create_time TIMESTAMP NOT NULL COMMENT '创建时间'
 );
+GRANT FILE ON *.* TO LOCAL@HOST;
+LOAD DATA INFILE 'E:\Tedycup-main\Tedycup-main\Tedy_cup\A赛题新冠疫情\附件2.csv' 
+INTO TABLE meber_info
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\r\n'
+(userid,openid,gender,nation,age,birthdate,create_time);
+SHOW VARIABLES LIKE '%secure%';
 DROP TABLE position_info;
 CREATE TABLE position_info/*创建场所信息表*/
 (
