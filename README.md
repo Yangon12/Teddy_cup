@@ -1,2 +1,2 @@
-# Tedy_cup
-This is just for the Tedy_cup!
+# Teddy_cup
+This is just for the Teddy_cup!
